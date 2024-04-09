@@ -1,0 +1,38 @@
+For bash scripting we can use terminals in any OS(operating system).
+It would be great to use Linux as it will have everything setup for you already. 
+If you dont have Linux you can install a virtual machine also.
+
+So as we begin we need to first understand what is scripting and why do we use it.
+Bash is referred to as shell in industry. When we open a terminal in any Linux or Unix system and we enter commands it means we are interacting with a shell.
+The shell allows us to enter commands and then it presents us with the results of the commands as output.
+
+Now lets open our terminal and try a small command. 
+Type "ls" - it means list storage of our current directory.(which most of us know)
+A shell allows us to work with a system via commands. As administrators there will be many commands which we will want to use and thats were automation comes in.
+As we dont want to execute the same commands over and over again in sequence. 
+It will also consume more time to write those commands, so we use shell and scripting to automate these commands and processes.
+
+We will be using the Bash Shell for scripting. 
+To check your shell type "echo $SHELL".
+To check which shell we are using we need to type "which bash" to check which type of bash is our terminal already running/using.
+The output which you get from typing the command "which bash" will be your command to use bash for most of the people it will show "/usr/bin/bash" if they are using Linux.
+
+In general a script is a text file which has commands written in it when you execute it, it means you have entered those commands yourself.
+
+To create a script we need to use a text editor. I will be using nano.
+To create a script i use the command "nano <file_name>" to write commands in the file.
+A script file has an extention as "<file_name>.sh". 
+When we enter the script we will type the command "ls" or any other simple command as "pwd". 
+We will save the script by pressing crtl+s and save the file and then press ctrl+x to exit the text editor.
+
+To execute the script we need to make it executable by changing the permissions of the file.
+To change the permissions of a file we type "sudo chmod +x <file_name>".
+Sudo allows us the access of root and chmod is used to change the mode of the file, "+x" means giving permisssion to execute.
+The command "ls -l" will show us the files with their permissions.
+
+To run the current script you need to be in the same directory of the script and type "./<file_name>" to execute.
+
+Check out my frist script named as "1-script.sh" to see the commands which I used.
+You can see the command "#!/bin/bash" called as the hashbang or shebang, its written as the first command of the file.
+It tells the script which interpreter the script to use. 
+As we are commanding it to use bash the interpreter will execute the script in bash even when you are using a different shell or editor.
